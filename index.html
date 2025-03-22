@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyper Search</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0f0f0f;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://example.com/valorant-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .search-container {
+            text-align: center;
+        }
+
+        .search-container img {
+            width: 200px;
+            margin-bottom: 30px;
+        }
+
+        .search-input {
+            width: 50%;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 30px;
+            border: 2px solid #ff4654;
+            background-color: #1c1c1c;
+            color: white;
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: #ff4654;
+        }
+
+        .search-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff4654;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .search-button:hover {
+            background-color: #d4434a;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #ff4654;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="search-container">
+        <img src="https://wallpapers.com/images/high/valorant-agents-8000-x-4500-wallpaper-6r29nkliegjmee3z.webp" alt="Valorant Logo">
+        <input type="text" class="search-input" placeholder="Search the game...">
+        <button class="search-button" onclick="search()">Get Set Game</button>
+    </div>
+
+    <div class="footer">
+        <p>Made by Hyper | <a href="https://github.com/your-github" target="_blank">GitHub</a></p>
+    </div>
+
+    <script>
+        function search() {
+            let query = document.querySelector('.search-input').value;
+            if (query) {
+                window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+            }
+        }
+    </script>
+
+</body>
+</html>
